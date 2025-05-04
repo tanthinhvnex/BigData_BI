@@ -7,6 +7,7 @@ docker exec -it kafka1 /bin/bash
 # Các lệnh sau cũng cần được chạy trong Container Kafka1
 ## Tạo topic
 Tạo các topic lần lượt là: gpt, copilot, gemini
+
 kafka-topics --create --topic gpt --bootstrap-server kafka1:19092 --partitions 1 --replication-factor 1
 
 kafka-topics --create --topic gemini --bootstrap-server kafka1:19092 --partitions 1 --replication-factor 1
