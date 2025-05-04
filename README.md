@@ -12,8 +12,11 @@ kafka-topics --create --topic gemini --bootstrap-server kafka1:19092 --partition
 kafka-topics --create --topic copilot --bootstrap-server kafka1:19092 --partitions 1 --replication-factor 1
 
 kafka-topics --create --topic gpt-2 --bootstrap-server kafka1:19092 --partitions 1 --replication-factor 1
+
 kafka-topics --create --topic gemini-2 --bootstrap-server kafka1:19092 --partitions 1 --replication-factor 1
+
 kafka-topics --create --topic copilot-2 --bootstrap-server kafka1:19092 --partitions 1 --replication-factor 1
+
 Chỉ cần tạo các topic này 1 lần duy nhất
 
 ## Liệt kê các topic hiện có
@@ -27,9 +30,13 @@ kafka-get-offsets --broker-list kafka1:19092 --topic gpt --time -2
 
 ## Xóa đi các topic
 kafka-topics --delete --topic gpt --bootstrap-server kafka1:19092
+
 kafka-topics --delete --topic gemini --bootstrap-server kafka1:19092
+
 kafka-topics --delete --topic copilot --bootstrap-server kafka1:19092
 
 kafka-topics --delete --topic gpt-2 --bootstrap-server kafka1:19092
+
 kafka-topics --delete --topic gemini-2 --bootstrap-server kafka1:19092
+
 kafka-topics --delete --topic copilot-2 --bootstrap-server kafka1:19092
